@@ -1,0 +1,143 @@
+:root {
+    --main-color: #FF9800;
+    --secound-color: #099d8f;
+    --third-color: #eee;
+}
+
+.contact {
+    background-color: #eee;
+    height: 100vh;
+    overflow: hidden;
+}
+
+@media (max-width:990px) {
+    .contact {
+        height: fit-content;
+    }
+}
+
+.contact .container {
+    padding: 200px 15px;
+    height: 100%;
+    text-align: center;
+}
+
+.contact .container h2 {
+    color: var(--secound-color);
+    margin: 50px 0;
+}
+
+.contact .container .inputs input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 30px;
+    border: none;
+    outline: none;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    position: relative;
+}
+
+.contact .container .inputs input:not([type="submit"]):focus {
+    border: 2px solid var(--secound-color);
+}
+
+.contact .container .inputs input::placeholder,
+.contact .container .info textarea::placeholder {
+    font-size: 18px;
+    opacity: .8;
+}
+
+.contact .container .info textarea {
+    width: 100%;
+    height: 66%;
+    margin-bottom: 25px;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.contact .container .info textarea:focus::-webkit-input-placeholder,
+.contact .container .inputs input:not([type="submit"]):focus::placeholder {
+    opacity: 0;
+    transition: .5s;
+}
+
+.contact .container .info textarea:focus {
+    border: 2px solid var(--secound-color);
+}
+
+.contact .container .info input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: transparent;
+    background-color: var(--secound-color);
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    transition: .5s;
+}
+
+.contact .container .info input[type="submit"]:hover {
+    background-color: #0c8276;
+}
+
+.infoform {
+    top: 100px;
+    right: -1000px;
+    background-color: #fff;
+    padding: 10px;
+    transition: .5s;
+    box-shadow: -1px 2px 3px 1px #00000021;
+}
+
+@media(max-width: 766px) {
+    .infoform.open {
+        top: 75px;
+    }
+}
+
+.infoform.open {
+    right: 0;
+}
+
+.infoform div:not(:last-child) {
+    padding: 10px;
+    background-color: var(--secound-color);
+    margin-bottom: 5px;
+}
+
+.infoform div:not(:last-child) span:first-child {
+    font-weight: bold;
+    color: #fff;
+}
+
+.infoform div:not(:last-child) span:last-child {
+    color: #eee;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.infoform .saveinfo .cansel,
+.infoform .saveinfo .save{
+    background-color: var(--main-color);
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.infoform .saveinfo .save {
+    margin-left: 10px;
+}
+
+.infoform .saveinfo span:hover {
+    opacity: .7;
+}

@@ -1,0 +1,240 @@
+:root {
+    --main-color: #FF9800;
+    --secound-color: #099d8f;
+    --third-color: #eee;
+}
+
+.services {
+    height: 100vh;
+    background-color: #eee;
+    overflow: hidden;
+}
+
+.services .container {
+    height: 100%;
+    padding: 151px 30px;
+    text-align: center;
+}
+
+.services h2 {
+    color: var(--secound-color);
+    margin-bottom: 50px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 35px;
+}
+
+.services .container .boxs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.services .container .boxs .box {
+    width: calc(95% / 3);
+    background-color: #fff;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 1px 2px 5px -1px #00000046;
+    counter-increment: services;
+    transition: .5s;
+}
+
+.services .container .boxs .box::before {
+    content: "0" counter(services);
+    position: absolute;
+    width: 50px;
+    height: 120px;
+    left: 40px;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: var(--main-color);
+}
+
+.services .container .boxs .box::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border: 25px solid;
+    background-color: transparent;
+    border-color: transparent transparent #fff transparent;
+    top: 70px;
+    left: 40px;
+}
+
+@media(max-width:992px) {
+    .services .container .boxs .box {
+        width: calc(95% / 2);
+    }
+
+    .services {
+        height: fit-content;
+    }
+}
+
+@media(max-width:767px) {
+    .services .container .boxs .box {
+        width: calc(95% / 1);
+    }
+
+    .services {
+        height: fit-content;
+    }
+}
+.services .container .boxs .box i {
+    color: #d5d5d5;
+    margin: 50px 0 20px 0;
+}
+
+.services .container .boxs .box h3 {
+    color: var(--secound-color);
+    margin: 10px 0 30px 0 ;
+}
+
+.services .container .boxs .box .info {
+    background-color: #f9f9f9;
+    padding: 15px;
+    text-align: right;
+    position: relative;
+}
+
+.services .container .boxs .box .info::before {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--main-color);
+    z-index: 2;
+}
+
+.services .container .boxs .box .info::after {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    left: 20%;
+    top: 0;
+    background-color: var(--secound-color);
+    z-index: 2;
+    transform: skew(-30deg);
+}
+
+.services .container .boxs .box .info span {
+    color: #03A9F4;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.services .container .boxs .box .info span:hover {
+    color: #0680b9;
+}
+
+.details {
+    position: fixed;
+    background-color: #fff;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 327px;
+    height: fit-content;
+    padding: 15px;
+    z-index: 151;
+    transition: .5s;
+    color: rgba(0, 0, 0, 0.506);
+    box-shadow: 1px 2px 4px 1px #00000052;
+}
+
+.details::before {
+    position: absolute;
+    width: 50%;
+    height: 50px;
+    font-size: 18px;
+    padding: 0 40px;
+    background-color: var(--main-color);
+    top: 0;
+    left: 0;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.details[data-name="Security"]::before {
+    content: "Security";
+}
+.details[data-name="FixingLssues"]::before {
+    content: "FixingLssues";
+    padding: 0 20px;
+}
+.details[data-name="Location"]::before {
+    content: "Location";
+}
+.details[data-name="Markting"]::before {
+    content: "Markting";
+    padding: 0 37px;
+}
+.details[data-name="Coding"]::before {
+    content: "Coding";
+}
+.details[data-name="Paints"]::before {
+    content: "Paints";
+    padding: 0 50px;
+}
+
+.details::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    top: 0;
+    left: 35%;
+    background-color: transparent;
+    border: 26px solid;
+    border-color: transparent #fff transparent transparent;
+}
+
+.details > div {
+    text-align: right;
+    margin-bottom: 0px;
+    font-size: 25px;
+    transition: .5s;
+    cursor: pointer;
+    display: flex;
+    justify-content: end;
+}
+
+.details > div p {
+    font-size: 20px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: rgba(0, 0, 0, 0.506);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.506);
+    transition: .5s;
+    font-weight: bold;
+}
+
+.details p {
+    line-height: 2.8;
+    font-size: 18px;
+}
+
+.details > div p:hover {
+    background-color: var(--main-color);
+    color: #fff;
+    border-color: white;
+}

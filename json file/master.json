@@ -1,0 +1,16 @@
+{
+    "intro": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident veritatis, officia reiciendis culpa molestiae qui distinctio adipisci eum dolore recusandae, perferendis sit veniam minus corrupti in voluptates! Animi, sit error?",
+    "title": "Web Developer",
+    "country": "Egypt",
+    "name":  "mostafa fekry",
+    "age": 22,
+    "skills": ["Html", "Css", "JavaScript"],
+    "text": "In the land of Uz there lived a man named Job; and he was blameless and upright, one who revered God and avoided",
+    "text2": "While he was still speaking, another messenger came and said,Lightning has fallen from heaven and has completely",
+    "Security": "All the Projects have security and trust so you can use the project in all prosses and also you can make a payment in it, All the Projects have security and trust so you can use the project in all prosses and also you can make a payment.",
+    "FixingLssues": "We have a good team developer can fix any problem with you or with your project in a short time ",
+    "Location": "If you need our location you can visit our site \"MostafaFekryMonerAliWebsite.com \" ",
+    "Markting": "We can make a marketing for your idea for one time and develop your salses and your projects",
+    "Coding": "All of the projects write it by pure js and clean code and this can make your project best", 
+    "Paints": "The project hase some paints from fontAwsome but most of codes by animation and native html and css and js"
+}
